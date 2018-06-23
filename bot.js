@@ -10,7 +10,7 @@ const moment = require('moment');
 
 
 client.on('message' , message => {
-  var prefix = "!";
+  var prefix = "p";
   let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
   if(message.content.startsWith(prefix + 'unban')) {
       if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
@@ -29,8 +29,8 @@ client.on('message' , message => {
 });
 
 client.on("message", message => {
- if (message.content === "!help") {
-        message.react("✅")
+ if (message.content === "phelp") {
+        message.react("❤")
            message.react("📬")
   const embed = new Discord.RichEmbed() 
       .setColor("#ffff00")
@@ -41,61 +41,61 @@ client.on("message", message => {
    👑「اوامر ادارية」👑
     
 
-   👑!rename 「لتغير أسم شخص ما」
+   👑prename 「لتغير أسم شخص ما」
  
-   👑!muteall 「لقفل الشات」
+   👑pmuteall 「لقفل الشات」
  
-   👑!unmuteall 「لفتح الشات」
+   👑punmuteall 「لفتح الشات」
  
-   👑!mute 「 لاعطاء ميوت لشخص 」
+   👑pmute 「 لاعطاء ميوت لشخص 」
  
-   👑!mutevoice 「 لاعطاء ميوت صوتي 」
+   👑pmutevoice 「 لاعطاء ميوت صوتي 」
  
-   👑!unmutevoice 「لفك ميوت صوتي 」
+   👑punmutevoice 「لفك ميوت صوتي 」
  
-   👑!deafen 「لأعطاء ديفن」
+   👑pdeafen 「لأعطاء ديفن」
  
-   👑!undeafen 「لفك الديفن」
+   👑pundeafen 「لفك الديفن」
  
-   👑!unmute 「 لفك الميوت」
+   👑punmute 「 لفك الميوت」
  
-   👑!createcolors 「لعمل 137 لون مرتب」
+   👑pcreatecolors 「لعمل 137 لون مرتب」
  
-   👑!deletecolors 「لحذف 137 لون」
+   👑pdeletecolors 「لحذف 137 لون」
  
-   👑!ban 「لتعطي شخص باند مع السبب」
+   👑pban 「لتعطي شخص باند مع السبب」
 
-   👑!unban 「لفك الباند عند شخص محدد」
+   👑punban 「لفك الباند عند شخص محدد」
    
-   👑!kick 「لتعطي شخص كيك مع السبب」
+   👑pkick 「لتعطي شخص كيك مع السبب」
     
-   👑!clear 「لمسح الشات」
+   👑pclear 「لمسح الشات」
     
-   👑!v  「لانشاء روم صوتي مؤقت」
+   👑pv  「لانشاء روم صوتي مؤقت」
  
-   👑!cc  「لانشاء كاتجوري 」
+   👑pcc  「لانشاء كاتجوري 」
  
-   👑!cv  「لانشاء روم صوتي دائم 」
+   👑pcv  「لانشاء روم صوتي دائم 」
 
-   👑!ct  「لانشاء روم كتابي دائم 」
+   👑pct  「لانشاء روم كتابي دائم 」
  
-   👑!delet   「يحذف الـروم سواء صوتي او كتابي」
+   👑pdelet   「يحذف الـروم سواء صوتي او كتابي」
  
-   👑!role  「لأعطاء رتبة」
+   👑prole  「لأعطاء رتبة」
  
-   👑!roleremove  「 أزالة رتبة」
+   👑proleremove  「 أزالة رتبة」
  
-   👑!role all  「لأعطاء جميع الي في سيرفر رتبة」
+   👑prole all  「لأعطاء جميع الي في سيرفر رتبة」
  
-   👑!role bots  「لأعطاء جميع البوتات رتبة」
+   👑prole bots  「لأعطاء جميع البوتات رتبة」
  
-   👑!role humans   「لأعطاء جميع الناس معدى البوتات رتبة 」
+   👑prole humans   「لأعطاء جميع الناس معدى البوتات رتبة 」
  
-   👑!voicekick  「لطرد شخص من روم صوتي」
+   👑pvoicekick  「لطرد شخص من روم صوتي」
  
-   👑!move  「لسحب الشخص الى الروم صوتي الخاص بك」
+   👑pmove  「لسحب الشخص الى الروم صوتي الخاص بك」
 
-   👑!move all 「لسحب جميع الاشخاص الموجودون بالرومات الصوتية أليك」
+   👑pmove all 「لسحب جميع الاشخاص الموجودون بالرومات الصوتية أليك」
 
  
 ══════════ஜ۩۞۩ஜ════════════  
@@ -110,7 +110,7 @@ client.on("message", message => {
 
 
    client.on('message', message => {
-    if (message.content == ("!ban")) {
+    if (message.content == ("pban")) {
                
 
         const mmss = require('ms');
@@ -183,7 +183,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-  var prefix = "!";
+  var prefix = "p";
   if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   var command = message.content.split(" ")[0];
@@ -232,8 +232,8 @@ if(!message.member.hasPermission("ADMINISTRATOR")) {
 }
 });
 
-const adminprefix = "!";
-const devs = ['402043862480322562', '342690534000951306'];
+const adminprefix = "p";
+const devs = ['359907771224817664', '270978812962013185'];
  
 
 client.on('message', message => {
@@ -282,7 +282,7 @@ if (message.content.startsWith(adminprefix + 'st')) {
 });
 
 client.on('message', message =>{
-  var prefix = "!";
+  var prefix = "p";
     if(message.author.bot) return;
     if(!message.content == (prefix+'clear'))
 if(!true) return;
@@ -318,7 +318,7 @@ if(!true) return;
 
 
 client.on('message', async message =>{
-  var prefix = "!";
+  var prefix = "p";
 if (message.author.omar) return;
 if (!message.content.startsWith(prefix)) return;
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -368,7 +368,7 @@ var args = message.content.split(" ").slice(1);
 
 });
 client.on('message', async message =>{
-  var prefix = "!";
+  var prefix = "p";
 if (message.author.omar) return;
 if (!message.content.startsWith(prefix)) return;
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
@@ -398,7 +398,7 @@ if(command === `unmute`) {
 });
 
 client.on('message', message => {
-  var prefix = "!";
+  var prefix = "p";
 
   if(message.content.startsWith(prefix + 'rename')) {
 if(message.member.hasPermission("ADMINISTRATOR")) {
@@ -420,7 +420,7 @@ var mentionned = message.mentions.users.first();
 
 
     client.on('message', message => {
-      var prefix = "!";
+      var prefix = "p";
       if(message.content.startsWith(prefix + 'mutevoice')) {
         if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**:x: ").then(m => m.delete(5000));
         if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
@@ -439,7 +439,7 @@ var mentionned = message.mentions.users.first();
     }
   });
   client.on('message', message => {
-    var prefix = "!";
+    var prefix = "p";
     if(message.content.startsWith(prefix + 'unmutevoice')) {
       if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**ليس لديك صلاحية لاعطاء ميوت صوتي**:x: ").then(m => m.delete(5000));
       if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
@@ -461,7 +461,7 @@ var mentionned = message.mentions.users.first();
 
     client.on('message', message => {
         if(!message.channel.guild) return;
-        var prefix = "!";
+        var prefix = "p";
     if(message.content.startsWith(prefix + 'move')) {
         var cmdrole = message.guild.roles.find("name", config.cmdrole)
            if (message.member.hasPermission("MOVE_MEMBERS")) {
@@ -496,7 +496,7 @@ if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return mess
         });
 
         client.on('message', message => {
-          var prefix = "!";
+          var prefix = "p";
           if(message.content.startsWith(prefix + 'move all')) {
            if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**لايوجد لديك صلاحية سحب الأعضاء**');
              if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**لايوجد لدي صلاحية السحب**");
@@ -513,7 +513,7 @@ if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return mess
              });
 
 client.on("message", message => {
-    var prefix = "!";
+    var prefix = "p";
     const command = message.content.split(" ")[0];
  
     if(command == prefix+"voicekick"){
@@ -543,7 +543,7 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
-    var prefix = "!";
+    var prefix = "p";
     var args = message.content.split(' ').slice(1); 
     var msg = message.content.toLowerCase();
     if( !message.guild ) return;
@@ -592,7 +592,7 @@ if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return mes
 });
 
     client.on('message', message => {
-      var prefix = "!";
+      var prefix = "p";
       if(message.content.startsWith(prefix + 'deafen')) {
     if (message.mentions.users.size === 0 && message.mentions.roles.size === 0) {
       return message.reply('**يجب عليك المنشن اولاّ**:x:').catch(console.error);
@@ -615,7 +615,7 @@ if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return mes
   });  
    
   client.on('message', async message =>{
-    var prefix = "!";
+    var prefix = "p";
     if(message.content.startsWith(prefix + 'undeafen')) {
    
   if (message.mentions.users.size === 0 && message.mentions.roles.size === 0) {
@@ -641,7 +641,7 @@ if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return mes
 
 
  
-var prefix= "!";
+var prefix= "p";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'ct')) {
      let args = message.content.split(" ").slice(1);
@@ -655,7 +655,7 @@ client.on("message", message => {
     }
     });
  
-var prefix= "!";
+var prefix= "p";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'cv2')) {
      let args = message.content.split(" ").slice(1);
@@ -669,7 +669,7 @@ client.on("message", message => {
     }
     });
 
-var prefix= "!";
+var prefix= "p";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'cc')) {
      let args = message.content.split(" ").slice(1);
@@ -683,7 +683,7 @@ client.on("message", message => {
     }
     });
 
-    var prefix= "!";
+    var prefix= "p";
     client.on("message", message => {
         if(message.content.startsWith(prefix + 'v')) {
          let args = message.content.split(" ").slice(1);
@@ -697,7 +697,7 @@ client.on("message", message => {
         });
 
 client.on('message', message => {
-  var prefix = "!";
+  var prefix = "p";
 if(message.content === prefix + "muteall") {
              if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -715,7 +715,7 @@ SEND_MESSAGES: false
 
 });
   client.on('message', message => {
-    var prefix = "!";
+    var prefix = "p";
 if(message.content === prefix + "unmuteall") {
           if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -733,7 +733,7 @@ SEND_MESSAGES: true
 });
 
           client.on("message", (message) => {
-            if (message.content.startsWith('!delet')) {
+            if (message.content.startsWith('pdelet')) {
 if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**I Don't Have `MANAGE_CHANNELS` Permission**").then(msg => msg.delete(6000))
                 if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("ليس لديك خاصية `MANAGE_CHANNELS` Premissions ");
          
@@ -746,7 +746,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return m
 
 
  
-var prefix = '!';
+var prefix = 'p';
 
 client.on('message', message => {
     if(message.content === prefix + 'createcolors') {
